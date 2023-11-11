@@ -33,6 +33,12 @@ public class Calculator {
                 num1 = Integer.parseInt(operands[0]);
                 num2 = Integer.parseInt(operands[1]);
             }
+              if (!(num1>=1 && num1<=10)){
+                throw new Exception("Первый операнд должен быть от 1 до 10 или от I до X включительно");
+            }
+            if (!(num2>=1 && num2<=10)){
+                throw new Exception("Второй операнд должен быть от 1 до 10 или от I до X включительно");
+            }
             assert oper != null;
             result = calc(num1, num2, oper);
             if (isRoman) {
